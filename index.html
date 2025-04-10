@@ -1,1 +1,42 @@
-<meta http-equiv="refresh" content="0; url=https://www.figma.com/proto/CaY5Z99J4CmTm3giUHdoY2/Paul-Palade?node-id=3647-1830&node-type=canvas&t=QzWWpNuA4tyzXNR3-8&scaling=contain&content-scaling=responsive&starting-point-node-id=3647%3A1830&disable-default-keyboard-nav=1&hotspot-hints=0&hide-ui=1"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loading...</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #fff;
+      font-family: sans-serif;
+    }
+    #loading {
+      font-size: 1.2rem;
+    }
+    iframe {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">Loading preview, please wait...</div>
+  <iframe id="preloader" src="https://www.figma.com/proto/CaY5Z99J4CmTm3giUHdoY2/Paul-Palade?node-id=3647-1830&node-type=canvas&t=QzWWpNuA4tyzXNR3-8&scaling=contain&content-scaling=responsive&starting-point-node-id=3647%3A1830&disable-default-keyboard-nav=1&hotspot-hints=0&hide-ui=1"></iframe>
+
+  <script>
+    const iframe = document.getElementById('preloader');
+
+    // Wait for iframe to start loading or after a fallback timeout
+    iframe.onload = function () {
+      window.location.href = iframe.src;
+    };
+
+    // Fallback: redirect after 5 seconds if iframe doesn't load
+    setTimeout(() => {
+      window.location.href = iframe.src;
+    }, 5000);
+  </script>
+</body>
+</html>
